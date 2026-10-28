@@ -7,6 +7,9 @@
     time.timeZone = "Asia/Tehran";
     i18n.defaultLocale = "en_US.UTF-8";
 
+    networking.firewall.checkReversePath = "loose";
+    networking.nftables.enable = true;
+
     environment.systemPackages = with pkgs; [
       git wget fastfetch firefox telegram-desktop
       nh nix-output-monitor nvd comma

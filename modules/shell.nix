@@ -12,7 +12,7 @@
 
     environment.systemPackages = with pkgs; [
       neovim micro foot alacritty kitty
-      nixfmt-rfc-style nixd nil statix
+      nixfmt-rfc nixd nil statix
     ];
   };
 }
