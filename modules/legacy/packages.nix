@@ -27,10 +27,7 @@
       };
 
       environment.systemPackages = with pkgs; [
-        nix-output-monitor nvd comma
-        nixfmt nixd nil statix
         kdePackages.kate firefox
-        telegram-desktop discord
       ];
     };
   };

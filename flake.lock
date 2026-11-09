@@ -38,11 +38,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1793064492,
-        "narHash": "sha256-wNgMxL+wiYVHTULqSvq9QOK6n8j3qQp7pugWclXORZE=",
+        "lastModified": 1794160999,
+        "narHash": "sha256-8qsp+b0Kci/sZKQq2roPZvFQtugCHneSDNp5RFtSzmw=",
         "owner": "areofyl",
         "repo": "fetch",
-        "rev": "1e0f767be4129976d4bece808b0110dd39ea66d7",
+        "rev": "dde4cf348d4d190ebe7b008c86a197fcd57f2d6f",
         "type": "github"
       },
       "original": {
@@ -107,6 +107,26 @@
         "type": "github"
       }
     },
+    "helium": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793894983,
+        "narHash": "sha256-Edf2dXsfHch4YEjzSdBY5+CEmBTBWa5psnlDWExBKWk=",
+        "owner": "oxcl",
+        "repo": "nix-flake-helium-browser",
+        "rev": "9fe3f8f48c8c25b0d245d13d6c91d4cf77adc729",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxcl",
+        "repo": "nix-flake-helium-browser",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -149,11 +169,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793543282,
-        "narHash": "sha256-PHtGxKYM99f8WhGR5YD7iiCiwemKa2wUD4yVI2oALFg=",
+        "lastModified": 1794132860,
+        "narHash": "sha256-iGNtQnUZsi+v6/4NbtYr+dsmASa6GkzXtUcTpE8F3mE=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "cee0f879d338cf08f814210fa6c2b280594ade0a",
+        "rev": "af9249ca33bc2efaae5d071e4c67ddef19dcb681",
         "type": "github"
       },
       "original": {
@@ -193,11 +213,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1793826729,
-        "narHash": "sha256-JiTUXdoNJNvdD+fjVlftWiLKJfHut3cIi8j2HXL9kT4=",
-        "rev": "6dadaf4375be35033e1c84395adbd53ff5fded96",
+        "lastModified": 1793977579,
+        "narHash": "sha256-4/Yzr1fWTh/zBAR1tR84ZQ1Zhmor8AXwgD4AS7sPn60=",
+        "rev": "4fe25e12eb9f4c744966dd3de5a05246cf098601",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1108556.6dadaf4375be/nixexprs.tar.zst?lastModified=1793826729&rev=6dadaf4375be35033e1c84395adbd53ff5fded96"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1109744.4fe25e12eb9f/nixexprs.tar.zst?lastModified=1793977579&rev=4fe25e12eb9f4c744966dd3de5a05246cf098601"
       },
       "original": {
         "type": "tarball",
@@ -267,13 +287,15 @@
         "fetch": "fetch",
         "flake-file": "flake-file",
         "flake-parts": "flake-parts",
+        "helium": "helium",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_3",
         "nixvim": "nixvim",
         "pyroclear": "pyroclear",
-        "treefmt-nix": "treefmt-nix"
+        "treefmt-nix": "treefmt-nix",
+        "zen-browser": "zen-browser"
       }
     },
     "systems": {
@@ -310,6 +332,29 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794113319,
+        "narHash": "sha256-zQgtR/G5j0eZayjrb6fpBVmy1fkOGlCHyLxW4Tboy2M=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "5f45f55b9f6f2de78504a95b372e13951793be3a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
