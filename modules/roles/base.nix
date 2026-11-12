@@ -8,10 +8,10 @@
     core.printing
     core.proxy
     core.rescue-tools
+    core.secrets
     nix.core
     nix.compat
     dev.direnv
     apps.flatpak
-    legacy.packages # TEMP, deleted at the end of Phase 7
   ];
 }

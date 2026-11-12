@@ -1,7 +1,7 @@
 { den, ... }:
 {
   den.aspects.apps.chat = {
-    includes = [ (den.batteries.unfree [ "discord" ]) ];
+    includes = [ (den.batteries.unfree [ "discord" "discord-unwrapped" ]) ];
     homeManager = { pkgs, ... }: {
       home.packages = with pkgs; [
         discord

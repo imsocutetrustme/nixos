@@ -7,5 +7,6 @@
     };
     services.dbus.implementation = "broker";
     boot.kernelPackages = pkgs.linuxPackages_latest;
+    boot.supportedFilesystems = [ "ntfs" ];
   };
 }

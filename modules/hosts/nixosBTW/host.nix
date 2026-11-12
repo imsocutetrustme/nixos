@@ -1,7 +1,7 @@
 { den, ... }:
 {
   den.aspects.nixosBTW = {
-    includes = with den.aspects.roles; [ base desktop tools apps ];
+    includes = with den.aspects.roles; [ base desktop tools apps gaming ];
 
     nixos = {
      networking.hostName = "nixosBTW";
