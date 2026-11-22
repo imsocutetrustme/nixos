@@ -5,5 +5,6 @@
     gaming.launchers
     gaming.performance
     gaming.capture
+    gaming.modrinth
   ];
 }
