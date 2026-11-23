@@ -9,7 +9,7 @@
     imports = [ inputs.sops-nix.nixosModules.sops ];
     sops = {
       defaultSopsFile = ../../secrets/secrets.yaml;
-      age.keyFile = "/var/lib/sops-nix/key.txt";
+      age.keyFile = "/persist/var/lib/sops-nix/key.txt";
       secrets.test-secret = { };
       secrets.ava-password.neededForUsers = true;
     };

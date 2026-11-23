@@ -1,23 +1,17 @@
-{ inputs, den, ... }:
+{ inputs, ... }:
 {
   flake-file.inputs.disko = {
     url = "github:nix-community/disko";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  den.aspects.nixosBTW.disko.nixos = {
-    imports = [
-      inputs.disko.nixosModules.disko
-    ];
+  den.aspects.storage.disko.nixos = {
+    imports = [ inputs.disko.nixosModules.disko ];
 
     disko.devices.disk.main = {
       type = "disk";
-      device =
-        "/dev/disk/by-id/ata-ST500DM002-1BD142_W2AADHP6";
-
       content = {
         type = "gpt";
-
         partitions = {
           BIOS = {
             priority = 1;
@@ -29,15 +23,11 @@
             priority = 2;
             size = "2G";
             type = "EF00";
-
             content = {
               type = "filesystem";
               format = "vfat";
               mountpoint = "/boot";
-              mountOptions = [
-                "fmask=0022"
-                "dmask=0022"
-              ];
+              mountOptions = [ "fmask=0022" "dmask=0022" ];
             };
           };
 
@@ -45,68 +35,41 @@
             priority = 3;
             size = "8G";
             type = "8200";
-
-            content = {
-              type = "swap";
-            };
+            content.type = "swap";
           };
 
           btrfs = {
             priority = 4;
             size = "100%";
-
             content = {
               type = "btrfs";
-              extraArgs = [
-                "-f"
-                "-L"
-                "nixos"
-              ];
+              extraArgs = [ "-f" "-L" "nixos" ];
 
               subvolumes = {
                 "/@root" = {
                   mountpoint = "/";
-                  mountOptions = [
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
+                  mountOptions = [ "compress=zstd:3" "noatime" ];
                 };
 
                 "/@nix" = {
                   mountpoint = "/nix";
-                  mountOptions = [
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
+                  mountOptions = [ "compress=zstd:3" "noatime" ];
                 };
 
                 "/@persist" = {
                   mountpoint = "/persist";
-                  mountOptions = [
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
+                  mountOptions = [ "compress=zstd:3" "noatime" ];
                 };
 
                 "/@home" = {
                   mountpoint = "/home";
-                  mountOptions = [
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
+                  mountOptions = [ "compress=zstd:3" "noatime" ];
                 };
 
                 "/@snapshots" = {
                   mountpoint = "/.snapshots";
-                  mountOptions = [
-                    "compress=zstd:3"
-                    "noatime"
-                  ];
+                  mountOptions = [ "compress=zstd:3" "noatime" ];
                 };
-
-                # Initial placeholder. The installation procedure
-                # will replace it with a read-only root baseline.
-                "/@root-blank" = { };
               };
             };
           };

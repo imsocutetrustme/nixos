@@ -34,6 +34,7 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    preservation.url = "github:nix-community/preservation";
     pyroclear.url = "github:shreyanth-sureshkrishnaa/pyroclear";
     sops-nix = {
       url = "github:Mic92/sops-nix";
