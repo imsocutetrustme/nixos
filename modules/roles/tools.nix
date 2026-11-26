@@ -5,9 +5,9 @@
     nix.lsp
     dev.git
     dev.nixvim
-    dev.vscodium
     dev.vscode
-    terminal.foot
+    dev.zed
+    dev.toolchains
     terminal.alacritty
     terminal.kitty
     terminal.fetch

@@ -8,8 +8,8 @@
   den.aspects.core.secrets.nixos = {
     imports = [ inputs.sops-nix.nixosModules.sops ];
     sops = {
-      defaultSopsFile = ../../secrets/secrets.yaml;
-      age.keyFile = "/persist/var/lib/sops-nix/key.txt";
+      defaultSopsFile = ../../../secrets/secrets.yaml;
+      age.keyFile = "/persist/var/lib/sops-nix/keys.txt";
       secrets.test-secret = { };
       secrets.ava-password.neededForUsers = true;
     };

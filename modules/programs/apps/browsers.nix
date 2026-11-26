@@ -20,6 +20,9 @@
 
   den.aspects.apps.helium.homeManager = {
     imports = [inputs.helium.homeModules.default];
-    programs.helium.enable = true;
+     programs.helium = {
+       enable = true;
+       flags = [ "--ozone-platform=x11" ];
+     };
   };
 }

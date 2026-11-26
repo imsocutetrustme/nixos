@@ -9,9 +9,9 @@
     core.proxy
     core.rescue-tools
     core.secrets
+    core.flatpak
     nix.core
     nix.compat
     dev.direnv
-    apps.flatpak
   ];
 }

@@ -8,7 +8,7 @@
       cbonsai
       cmatrix
       cava
-      inputs.pyroclear.packages.${pkgs.system}.default
+      inputs.pyroclear.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }

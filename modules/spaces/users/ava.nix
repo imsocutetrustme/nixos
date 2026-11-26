@@ -7,6 +7,5 @@
       den.batteries.host-aspects
       (den.batteries.user-shell "fish")
     ];
-    provides.to-hosts.nixos = { pkgs, ... }: { };
   };
 }

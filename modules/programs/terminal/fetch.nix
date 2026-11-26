@@ -7,7 +7,7 @@
     home.packages = with pkgs; [
       fastfetch
       hyfetch
-      inputs.fetch.packages.${pkgs.system}.default
+      inputs.fetch.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 }
